@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo 2';
+}
+
+body {
+    background-color: #d5ebff;
+}
+
+#outer-nav {
+    border-bottom: 2px solid rgb(0, 30, 255);
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav {
+    width: 98%;
+    height: 10vh;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav1 {
+    height: 100%;
+    width: 75px;
+}
+
+#nav1 img {
+    height: 100%;
+    width: 100%;
+    border-radius: 38px;
+    box-shadow: 0 0 7px #313131;
+}
+
+#nav2 {
+    /* border: 1px solid gray; */
+    height: 100%;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#nav2 a {
+    border: 2px solid blue;
+    width: 73px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 29px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#nav2 a:hover {
+    background-color: blue;
+    color: white;
+}
+
+#theme {
+    border: 1px solid #0085ff;
+    color: rgb(57, 57, 57);
+    width: 58px;
+    height: 24px;
+    font-size: 3rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-radius: 24px;
+    background-color: white;
+    box-shadow: rgb(52, 52, 52) 0px 0px 6px inset;
+    animation-name: themeOn;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+#theme:hover {
+    cursor: pointer;
+}
+
+#outer-todo {
+    /* border: 1px solid gray; */
+    margin: 30px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo {
+    /* border: 1px solid black; */
+    list-style: none;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#default-todo,
+.created-todo {
+    border: 2px solid rgb(0, 136, 255);
+    height: 33vh;
+    min-width: 186px;
+    max-width: 186px;
+    margin: 0 55px 44px 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(129, 185, 255);
+    border-radius: 10px;
+    color: rgb(0, 0, 86);
+}
+
+#default-todo i {
+    /* border: 1px solid; */
+    width: 100%;
+    height: 47%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#createEle {
+    border: none;
+    background-color: transparent;
+    width: 52px;
+    height: 52px;
+    border-radius: 34px;
+}
+
+#default-todo i button svg {
+    color: #0011ff;
+}
+
+#default-todo i button svg:hover {
+    transform: rotate(90deg);
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#default-para {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#default-para p {
+    width: 90%;
+    font-size: 1.2rem;
+}
+
+.outer-content {
+    width: 100%;
+    /* border: 1px solid; */
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 90%;
+    /* border: 1px solid; */
+    height: 95%;
+}
+
+.created-todo i {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.deleteEle {
+    border: 2px solid transparent;
+    background-color: red;
+    height: 100%;
+    width: 21%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px 11px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 2px #fe0000;
+}
+
+.deleteEle:hover {
+    cursor: pointer;
+    background-color: rgb(168, 0, 0);
+}
+
+.deleteEle svg {
+    filter: invert();
+}
+
+#section-form {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    /* background-color: rgb(255, 255, 255); */
+    background-color: rgb(255 255 255 / 83%);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#outer-form {
+    border: 2px solid #0294e9;
+    width: 20%;
+    height: 60%;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 0 10px #259bbe;
+}
+
+#outer-form i {
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 10%;
+    align-items: start;
+}
+
+#form-cross {
+    background-color: rgba(185, 185, 185, 0);
+    border: none;
+    height: 84%;
+    width: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1px;
+}
+
+#form-cross:hover {
+    cursor: pointer;
+    background-color: rgb(0 177 157);
+    filter: invert();
+}
+
+#form-head {
+    /* border: 1px solid; */
+    width: 100%;
+    height: 12%;
+    font-size: 1.7rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #002d7e;
+    text-shadow: 1px 1px 2px #00ceff;
+}
+
+form {
+    /* border: 1px solid; */
+    width: 100%;
+    height: 66%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#inputText {
+    padding: 10px;
+    border: 2px solid #0091ca;
+    font-size: 1.1rem;
+}
+
+#form-btn {
+    /* border: 1px solid; */
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-btn {
+    background-color: #0011ff70;
+    width: 35%;
+    height: 35px;
+    border-radius: 8px;
+    border: 2px solid blue;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.main-btn:hover {
+    cursor: pointer;
+    background-color: #0011ffce;
+    color: white;
+}
