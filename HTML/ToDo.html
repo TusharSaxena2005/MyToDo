@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/ToDo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+    <title>MyToDoList</title>
+</head>
+
+<body>
+    <header>
+        <div id="outer-nav">
+            <ul id="nav">
+                <li id="nav1" class="nav">
+                    <img src="../IMAGES/logo.jpg" alt="logo">
+                </li>
+                <li id="nav2" class="nav">
+                    <a href="#">Login</a>
+                    <button id="theme">&SmallCircle;</button>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div id="outer-todo">
+            <ul id="todo">
+                <li id="default-todo">
+                    <i class="bi bi-plus-circle">
+                        <button id="createEle" onclick="open_form()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                                class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                <path
+                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                            </svg>
+                        </button>
+                    </i>
+                    <div id="default-para">
+                        <p>Click on plus icon to add items in your list.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <section id="section-form">
+        <div id="outer-form">
+            <i class="bi bi-x">
+                <button id="form-cross" onclick="exit_form()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" fill="currentColor" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                    </svg>
+                </button>
+            </i>
+            <div id="form-head">
+                <p>Add your task</p>
+            </div>
+            <form action="">
+                <textarea id="inputText" cols="28" rows="7" placeholder="Enter your task here..."></textarea>
+                <div id="form-btn">
+                    <button type="reset" id="resetText" class="main-btn">Reset</button>
+                    <button type="submit" id="submitEle" class="main-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <script src="../JS/ToDo.js"></script>   
+</body>
+
+</html>
